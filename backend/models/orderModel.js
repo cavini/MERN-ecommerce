@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const orderSchema = mongoose.schema(
+const orderSchema = mongoose.Schema(
   {
     user: { type: mongoose.Schema.Types.ObjectId, required: true, ref: 'User' },
     orderItems: [
@@ -34,7 +34,7 @@ const orderSchema = mongoose.schema(
     totalPrice: { type: Number, required: true, default: 0.0 },
     isPaid: { type: Boolean, required: true, default: false },
     paidAt: { type: Date },
-    isDelivered: { type: Bolean, required: true, default: false },
+    isDelivered: { type: Boolean, required: true, default: false },
     deliveredAt: { type: Date },
   },
   {
